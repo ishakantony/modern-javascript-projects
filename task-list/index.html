@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h1 class="center-align">Simple Task List App</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 offset-m3">
+          <div id="main" class="card">
+            <div class="card-content">
+              <span class="card-title">Add Task</span>
+              <p>Type a task in the input field and click 'Add Task' button or press enter while still inside the input field</p>
+              <div class="row" style="margin-top: 0.5rem">
+                <form id="task-form">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input type="text" name="task" id="task" />
+                      <label for="task">New Task</label>
+                    </div>
+                  </div>
+                  <div class="col s12">
+                    <button
+                      type="submit"
+                      class="btn orange waves-effect waves-light"
+                    /><i class="fas fa-plus right"></i> Add Task</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 offset-m3">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Tasks</span>
+              <p>You can filter the tasks by typing inside the filter box</p>
+              <div class="row" style="margin-top: 0.5rem">
+                <div class="col s12">
+                  <div class="input-field">
+                    <input type="text" name="task-filter" id="task-filter">
+                    <label for="task-filter">Filter</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <ul id="task-list" class="collection"></ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <button class="btn waves-effect red" id="clear-all-tasks">Clear Tasks</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
